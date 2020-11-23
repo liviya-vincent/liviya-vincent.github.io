@@ -1,0 +1,87 @@
+ <head>
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript">
+    function Validate()
+    {
+      var uname= document.getElementById("uname");
+      var password= document.getElementById("pass"); 
+      
+      if(uname.value.trim() =="")
+      {
+          alert("Blank username")
+          // uname.style.border="solid 3px red";
+          // document.getElementById("lbluser").style.visibility="visible";
+          return false;
+      }
+      else if(password.value.trim()=="")
+      {
+          alert("Blank password");
+          // password.style.border="solid 3px red";
+          return false;
+      }
+      else if(password.value.trim().length<=8)
+      {
+          alert("password too short");
+          // password.style.border="solid 3px red";
+          return false;
+      }
+      else{
+          return true;
+      }
+    }
+    </script>
+  </head>
+
+<body background="./img/Capture.JPG">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="login.html">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="district.html">District</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="wrapper">  
+  <div id="formContent"> 
+    <div class="avatar">
+        <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+    </div>
+      <br>
+
+     
+    <form onsubmit="return Validate()" action="district.html">  
+      <input id="uname" class="fadeIn second"  placeholder="username" type="text"/>
+      
+      <br>
+      <br>
+      
+      <input id="pass" class="fadeIn third" placeholder="password"  type="password"/>
+      <br>
+      <br>
+      <input type="submit" id="submit"class="fadeIn fourth" value="Log In">
+      
+     
+    </form>
+
+  
+
+  </div>
+</div>
+</body>
